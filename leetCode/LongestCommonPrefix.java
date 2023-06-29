@@ -7,7 +7,7 @@ public class LongestCommonPrefix {
 		}
 		// hint : Start comparing with the second element of String array , if the
 		// prefix does not matches the element decrese the prefix by one.
-		String prefix = str[0];
+		String prefix = str[0];   //assigning "flower" to prefix.
 		for (int i = 1; i < str.length; i++) {
 			while (str[i].indexOf(prefix) != 0) {
 				prefix = prefix.substring(0, prefix.length() - 1);

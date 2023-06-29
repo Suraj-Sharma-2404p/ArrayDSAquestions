@@ -10,13 +10,13 @@ public class SearchInASortedRotatedArray {
 			if (key == array[mid]) {
 				return mid;
 			}
-			if (array[low] <= array[mid]) {     // ' = 'checks the condition when array has only 2 elements.
+			if (array[low] <= array[mid]) {     // ' = 'checks the condition when array has only 2 elements.left part is sorted.
 				if (key >= array[low] && key < array[mid]) {
 					high = mid - 1;
 				} else {
 					low = mid + 1;
 				}
-			} else {
+			} else {                                          //right part from mid element is sorted.
 				if (key > array[mid] && key <= array[high]) {
 					low = mid + 1;
 				} else {
@@ -29,7 +29,7 @@ public class SearchInASortedRotatedArray {
 
 	public static void main(String[] args) {
 
-		int[] array = new int[] {4,1};
-		System.out.println(binarySearch(array, 0));
+		int[] array = new int[] {4,1,2,3};
+		System.out.println(binarySearch(array, 4));
 	}
 }
